@@ -1,0 +1,56 @@
+name: Student Registration CI
+
+# Run the workflow whenever code is pushed
+# or a Pull Request is created
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-html:
+
+    name: Test Student Registration Dashboard
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      # 1. Get the code from GitHub
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      # 3. Check project files
+      - name: Check Project Files
+        run: |
+          echo "Checking project files..."
+          ls -la
+          echo "Checking workflow..."
+          echo "HTML file:"
+          test -f index.html
+          echo "CSS file:"
+          test -f style.css
+          echo "JavaScript file:"
+          test -f script.js
+          echo "Python test file:"
+          test -f test_html.py
+
+      # 4. Run HTML tests
+      - name: Run HTML Tests
+        run: |
+          echo "Running HTML validation..."
+          python test_html.py
+
+      # 5. Display success message
+      - name: Test Successful
+        if: success()
+        run: |
+          echo "======================================"
+          echo "     ALL TESTS PASSED SUCCESSFULLY"
+          echo "======================================"
+          echo "Student Registration Dashboard is valid."

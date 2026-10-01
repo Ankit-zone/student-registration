@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudentHub | Registration Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            <div>
+                <h2>StudentHub</h2>
+                <span>Management System</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#dashboard" class="nav-link active">
+                <span>📊</span> Dashboard
+            </a>
+
+            <a href="#register" class="nav-link">
+                <span>📝</span> Registration
+            </a>
+
+            <a href="#students" class="nav-link">
+                <span>👨‍🎓</span> Students
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <p>CI/CD Status</p>
+
+            <div class="ci-status">
+                <span class="status-dot"></span>
+                All systems operational
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+
+            <div>
+                <p class="welcome">Welcome back 👋</p>
+                <h1>Student Dashboard</h1>
+            </div>
+
+            <div class="header-actions">
+
+                <button id="themeBtn" class="icon-btn">
+                    🌙
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">AY</div>
+                    <div>
+                        <strong>Admin</strong>
+                        <small>Administrator</small>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard">
+
+            <div class="stats">
+
+                <div class="stat-card">
+                    <div class="stat-icon blue">👨‍🎓</div>
+                    <div>
+                        <span>Total Students</span>
+                        <h2 id="totalStudents">0</h2>
+                        <small>Registered students</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">📚</div>
+                    <div>
+                        <span>Courses</span>
+                        <h2>3</h2>
+                        <small>Available programs</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+                    <div>
+                        <span>Registrations</span>
+                        <h2 id="registrationCount">0</h2>
+                        <small>This session</small>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">⚡</div>
+                    <div>
+                        <span>System</span>
+                        <h2>99%</h2>
+                        <small>Operational</small>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- MAIN GRID -->
+            <div class="dashboard-grid">
+
+                <!-- REGISTRATION CARD -->
+                <section id="register" class="card registration-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="section-label">NEW STUDENT</span>
+                            <h2>Student Registration</h2>
+                            <p>Add a new student to the system.</p>
+                        </div>
+
+                        <div class="form-number">
+                            01
+                        </div>
+
+                    </div>
+
+
+                    <form id="registrationForm">
+
+                        <div class="form-grid">
+
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter student's name"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="student@example.com"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="phone"
+                                    placeholder="+91 XXXXX XXXXX"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="course">Course</label>
+
+                                <select id="course" name="course" required>
+
+                                    <option value="">
+                                        Select course
+                                    </option>
+
+                                    <option value="Data Science">
+                                        Data Science
+                                    </option>
+
+                                    <option value="Computer Science">
+                                        Computer Science
+                                    </option>
+
+                                    <option value="AI & ML">
+                                        Artificial Intelligence & ML
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="year">Academic Year</label>
+
+                                <select id="year" name="year" required>
+
+                                    <option value="">
+                                        Select year
+                                    </option>
+
+                                    <option>1st Year</option>
+                                    <option>2nd Year</option>
+                                    <option>3rd Year</option>
+                                    <option>4th Year</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="gender">Gender</label>
+
+                                <select id="gender" name="gender" required>
+
+                                    <option value="">
+                                        Select gender
+                                    </option>
+
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-footer">
+
+                            <button type="reset" class="secondary-btn">
+                                Clear
+                            </button>
+
+                            <button type="submit" class="primary-btn">
+                                Register Student →
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </section>
+
+
+                <!-- QUICK INFO -->
+                <section class="card quick-card">
+
+                    <div class="card-header">
+                        <div>
+                            <span class="section-label">OVERVIEW</span>
+                            <h2>Quick Insights</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="course-item">
+
+                        <div class="course-icon blue">
+                            DS
+                        </div>
+
+                        <div>
+                            <strong>Data Science</strong>
+                            <small>Technology Program</small>
+                        </div>
+
+                        <span>40%</span>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div style="width:40%"></div>
+                    </div>
+
+
+                    <div class="course-item">
+
+                        <div class="course-icon purple">
+                            CS
+                        </div>
+
+                        <div>
+                            <strong>Computer Science</strong>
+                            <small>Technology Program</small>
+                        </div>
+
+                        <span>35%</span>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div style="width:35%"></div>
+                    </div>
+
+
+                    <div class="course-item">
+
+                        <div class="course-icon green">
+                            AI
+                        </div>
+
+                        <div>
+                            <strong>AI & ML</strong>
+                            <small>Technology Program</small>
+                        </div>
+
+                        <span>25%</span>
+
+                    </div>
+
+
+                    <div class="progress">
+                        <div style="width:25%"></div>
+                    </div>
+
+
+                    <div class="info-box">
+
+                        <span>💡</span>
+
+                        <div>
+                            <strong>Registration Tip</strong>
+
+                            <p>
+                                Make sure all student information
+                                is accurate before submitting.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- STUDENT TABLE -->
+            <section id="students" class="card students-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <span class="section-label">STUDENT DIRECTORY</span>
+                        <h2>Recent Registrations</h2>
+                    </div>
+
+                    <div class="search-box">
+
+                        🔍
+
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Search students..."
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="table-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Student</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                                <th>Year</th>
+                                <th>Status</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="studentTable">
+
+                            <tr class="empty-row">
+
+                                <td colspan="5">
+                                    No students registered yet.
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <span>© 2026 StudentHub</span>
+
+            <span>
+                Built with HTML • CSS • JavaScript
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- TOAST -->
+
+<div id="toast" class="toast">
+    <span>✓</span>
+    <div>
+        <strong>Success!</strong>
+        <p>Student registered successfully.</p>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
