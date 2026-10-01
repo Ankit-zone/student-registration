@@ -31,7 +31,11 @@ pipeline {
                 echo 'Running HTML validation tests...'
 
                 bat '''
-                    python test_html.py
+                    echo Checking Python installation...
+                    "C:\\Users\\Ankit\\anaconda3\\python.exe" --version
+
+                    echo Running HTML tests...
+                    "C:\\Users\\Ankit\\anaconda3\\python.exe" test_html.py
                 '''
             }
         }
