@@ -32,5 +32,5 @@ for element in required_elements:
     )
 
 print("================================")
-print("   ALL HTML TESTS PASSED ✅")
+print("   ALL HTML TESTS PASSED")
 print("================================")
